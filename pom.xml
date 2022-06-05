@@ -11,7 +11,7 @@
 	<groupId>com.mb</groupId>
 	<artifactId>mbe</artifactId>
 	<version>1</version>
-	<packaging>jar</packaging>
+	<packaging>war</packaging>
 	<name>mbe</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
@@ -64,9 +64,39 @@
 			<artifactId>bootstrap</artifactId>
 			<version>4.0.0</version>
 		</dependency>
+
+		<dependency>
+			<groupId>com.miragesql</groupId>
+			<artifactId>miragesql</artifactId>
+			<version>2.1.2</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-mirage</artifactId>
+			<version>0.3.2.RELEASE</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.slf4j</groupId>
+					<artifactId>slf4j-api</artifactId>
+				</exclusion>
+			</exclusions>
+
+			<scope>system</scope>
+			<systemPath>${project.basedir}/src/main/webapp/WEB-INF/lib/spring-data-mirage-0.3.2.RELEASE.jar</systemPath>
+		</dependency>
+
+		<!-- Mirage -->
+		<dependency>
+			<groupId>jp.sf.amateras</groupId>
+			<artifactId>mirage</artifactId>
+			<version>1.2.5</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>
+		<finalName>mbe</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
