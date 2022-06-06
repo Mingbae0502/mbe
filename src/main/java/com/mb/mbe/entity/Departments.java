@@ -8,11 +8,12 @@ import org.springframework.data.annotation.Id;
 
 @Setter
 @Getter
-@Table(name = "DEPARTMENTS")
+//@Table(name = "DEPARTMENTS")
+
 public class Departments {
 
-    @Id
-    @PrimaryKey(generationType= PrimaryKey.GenerationType.SEQUENCE,generator="SEQ_DEPARTMENTS")
+//    @Id
+//    @PrimaryKey(generationType= PrimaryKey.GenerationType.SEQUENCE,generator="SEQ_DEPARTMENTS")
     private Long department_id;
     private String department_name;
     private Long manager_id;
