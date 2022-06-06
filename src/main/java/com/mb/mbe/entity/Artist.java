@@ -10,19 +10,20 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-@Entity
-@AllArgsConstructor
-@NoArgsConstructor
-@Getter
-@Setter
+//@Entity
+//@AllArgsConstructor
+//@NoArgsConstructor
+//@Getter
+//@Setter
+//@Table("")
 public class Artist extends AbtractEntity {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long artistId;
-    private String fullName;
-    private String nickName;
-    private String stageName;
-    private String specialization;
+//    @Id
+//    @GeneratedValue(strategy = GenerationType.AUTO)
+//    private Long artistId;
+//    private String fullName;
+//    private String nickName;
+//    private String stageName;
+//    private String specialization;
 
 }
