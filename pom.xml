@@ -10,93 +10,67 @@
 	</parent>
 	<groupId>com.mb</groupId>
 	<artifactId>mbe</artifactId>
-	<version>1</version>
+	<version>0.0.1</version>
 	<packaging>war</packaging>
 	<name>mbe</name>
-	<description>Demo project for Spring Boot</description>
+	<description>Entertainment Website</description>
 	<properties>
 		<java.version>1.8</java.version>
 	</properties>
 	<dependencies>
-<!--		<dependency>-->
-<!--			<groupId>org.springframework.boot</groupId>-->
-<!--			<artifactId>spring-boot-starter-data-jpa</artifactId>-->
-<!--		</dependency>-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-jdbc</artifactId>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-
 <!--		<dependency>-->
-<!--			<groupId>com.h2database</groupId>-->
-<!--			<artifactId>h2</artifactId>-->
-<!--			<scope>runtime</scope>-->
+<!--			<groupId>org.springframework.boot</groupId>-->
+<!--			<artifactId>spring-boot-starter-test</artifactId>-->
+<!--			<scope>test</scope>-->
 <!--		</dependency>-->
-
-		<!--<dependency>-->
-			<!--<groupId>org.springframework.boot</groupId>-->
-			<!--<artifactId>spring-boot-starter-tomcat</artifactId>-->
-			<!--<scope>provided</scope>-->
-		<!--</dependency>-->
-
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.projectlombok</groupId>
-			<artifactId>lombok</artifactId>
-			<optional>true</optional>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-thymeleaf</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>nz.net.ultraq.thymeleaf</groupId>
-			<artifactId>thymeleaf-layout-dialect</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>org.webjars</groupId>
-			<artifactId>bootstrap</artifactId>
-			<version>4.0.0</version>
-		</dependency>
-
-		<dependency>
-			<groupId>com.miragesql</groupId>
-			<artifactId>miragesql</artifactId>
-			<version>2.1.2</version>
-		</dependency>
-
 		<dependency>
 			<groupId>org.springframework.data</groupId>
 			<artifactId>spring-data-mirage</artifactId>
-			<version>0.3.2.RELEASE</version>
+			<version>0.11.1.RELEASE</version>
 			<exclusions>
 				<exclusion>
 					<groupId>org.slf4j</groupId>
 					<artifactId>slf4j-api</artifactId>
 				</exclusion>
 			</exclusions>
-
 			<scope>system</scope>
-			<systemPath>${project.basedir}/src/main/webapp/WEB-INF/lib/spring-data-mirage-0.3.2.RELEASE.jar</systemPath>
+			<systemPath>D:/soft/java/lib/spring-data-mirage-0.11.1.RELEASE.jar</systemPath>
 		</dependency>
-
-		<!-- Mirage -->
+<!--		<dependency>-->
+<!--			<groupId>jp.xet.spar-wings</groupId>-->
+<!--			<artifactId>spar-wings-spring-data-chunk</artifactId>-->
+<!--			<version>0.35</version>-->
+<!--		</dependency>-->
 		<dependency>
-			<groupId>jp.sf.amateras</groupId>
-			<artifactId>mirage</artifactId>
-			<version>1.2.5</version>
+			<groupId>jp.xet.spar-wings</groupId>
+			<artifactId>spar-wings-spring-data-chunk</artifactId>
+			<version>0.38</version>
+			<scope>system</scope>
+			<systemPath>D:/soft/java/lib/spar-wings-spring-data-chunk-0.38.jar</systemPath>
 		</dependency>
-
+		<dependency>
+			<groupId>com.oracle.database.jdbc</groupId>
+			<artifactId>ojdbc8</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-tomcat</artifactId>
+			<scope>provided</scope>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.data</groupId>
 			<artifactId>spring-data-commons</artifactId>
-			<version>2.7.0</version>
+			<version>2.0.14.RELEASE</version>
+			<!--			<version>2.7.0</version>-->
 			<exclusions>
 				<exclusion>
 					<groupId>org.springframework</groupId>
@@ -108,24 +82,27 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
-
-		<!-- https://mvnrepository.com/artifact/com.oracle.jdbc/ojdbc7 -->
 		<dependency>
-			<groupId>com.oracle.jdbc</groupId>
-			<artifactId>ojdbc7</artifactId>
-			<version>ojdbc7-7.0</version>
-			<scope>system</scope>
-			<systemPath>${project.basedir}/src/main/webapp/WEB-INF/lib/ojdbc7-7.0.jar</systemPath>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<optional>true</optional>
 		</dependency>
-
+<!--		<dependency>-->
+<!--			<groupId>org.springframework.boot</groupId>-->
+<!--			<artifactId>spring-boot-starter-thymeleaf</artifactId>-->
+<!--		</dependency>-->
 		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-jdbc</artifactId>
-			<version>4.3.20.RELEASE</version>
+			<groupId>org.webjars</groupId>
+			<artifactId>bootstrap</artifactId>
+			<version>4.0.0</version>
 		</dependency>
-
+		<!-- Mirage -->
+		<dependency>
+			<groupId>jp.sf.amateras</groupId>
+			<artifactId>mirage</artifactId>
+			<version>1.2.5</version>
+		</dependency>
 	</dependencies>
-
 	<build>
 		<finalName>mbe</finalName>
 		<plugins>

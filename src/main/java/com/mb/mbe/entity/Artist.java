@@ -1,29 +1,29 @@
 package com.mb.mbe.entity;
 
-import lombok.AllArgsConstructor;
+import jp.sf.amateras.mirage.annotation.Column;
+import jp.sf.amateras.mirage.annotation.Table;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-//import javax.persistence.Entity;
-//import javax.persistence.GeneratedValue;
-//import javax.persistence.GenerationType;
-//import javax.persistence.Id;
-
-//@Entity
-//@AllArgsConstructor
-//@NoArgsConstructor
-//@Getter
-//@Setter
-//@Table("")
-public class Artist extends AbtractEntity {
+@Setter
+@Getter
+@Table(name = "ARTIST")
+public class Artist {
 
 //    @Id
-//    @GeneratedValue(strategy = GenerationType.AUTO)
-//    private Long artistId;
-//    private String fullName;
-//    private String nickName;
-//    private String stageName;
-//    private String specialization;
+//    @PrimaryKey(generationType = GenerationType.SEQUENCE, generator = "SEQ_ARTIST")
+    @Column(name = "ARTIST_ID")
+    private Long artistId;
 
+    @Column(name = "FULL_NAME")
+    private String fullName;
+
+    @Column(name = "NICK_NAME")
+    private String nickName;
+
+    @Column(name = "STAGE_NAME")
+    private String stageName;
+
+    @Column(name = "SPECIALIZATION")
+    private String specialization;
 }
